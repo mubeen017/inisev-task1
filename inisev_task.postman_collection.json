@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "84b73631-ea17-4846-ae05-6db758de2640",
+		"name": "Upwork Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4677693"
+	},
+	"item": [
+		{
+			"name": "Get Websites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/websites",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"websites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/v1/posts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "website_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Testing Title of post",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "bodyfjaskl dfjlas dfjlksd fjl",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "published",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/posts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "website_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/subscriptions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": " http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
